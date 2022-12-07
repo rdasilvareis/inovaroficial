@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.container {
+    background:orange;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1.5fr 1.5fr;
+    grid-template-areas:  "item  item"
+                         "item1 item2"    
+                         "item3 item4 ";
+    color:white; 
+    grid-gap: 0.5em;
+    
+
+}
+.item {
+    background: green;
+    position: relative;
+    grid-area: item;
+
+}
+.item img {
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    border:3px solid orange ;
+    position:absolute;
+    top:10px;
+    left:610px;
+}
+.item a {
+
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top:120px;
+    left:570px;
+}
+
+.item1 {
+    position: relative;
+    grid-area: item1;
+    background: green;
+
+}
+.quimico img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:10px;
+    left:250px;
+}
+.quimico h4{
+
+    position: absolute;
+    top:180px;
+    left:90px;
+}
+
+.item2 {
+    position: relative;
+    grid-area: item2;
+    background: green;
+
+}
+.higiene img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:10px;
+    left:250px;
+}
+.higiene h4{
+
+    position: absolute;
+    top:180px;
+    left:90px;
+}
+
+.item3 {
+    position: relative;
+    grid-area: item3;
+    background: green;
+
+
+}
+.limpeza img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:10px;
+    left:250px;
+}
+.limpeza h4{
+
+    position: absolute;
+    top:180px;
+    left:90px;
+}
+.item4 {
+    position: relative;
+    grid-area: item4;
+    background: green;
+
+}
+.descartaveis img {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:10px;
+    left:250px;
+}
+.descartaveis h4{
+
+    position: absolute;
+    top:180px;
+    left:90px;
+}
+@media screen and ( max-width:700px){
+body{
+    max-width: 700px;
+}
+.container {
+    background:orange;
+    width:100%;
+    display: grid;
+    grid-template-columns: 4fr 0fr;
+    grid-template-rows: 0.5fr 0.6fr 0.6fr 0.6fr 0.6fr;
+    grid-template-areas:  "item"
+                         "item1"    
+                         "item2"
+                        "item3"
+                         "item4";
+    color:white; 
+    grid-gap: 0.2em;
+    
+
+}
+.item{
+    width:100%;
+    position:relative;
+}
+.item img {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left:45%;
+}
+.item a {
+    font-size: 0.3em;
+    position:absolute;
+    top:80%;
+    left:45%;
+}
+.item1 img {
+    width:10%;
+    height: auto;
+    position:absolute;
+    top:2%;
+    left:45%;
+}
+.limpeza h4 {
+    font-size: 0.5em;
+    position: absolute;
+    top:70%;
+    left:33%;
+}
+.item2 img {
+    width:8%;
+    height: auto;
+    position:absolute;
+    top:2%;
+    left:45%;
+}
+.quimico h4 {
+    font-size: 0.5em;
+    position: absolute;
+    top:70%;
+    left:33%;
+}
+.item3 img {
+    width:10%;
+    height: auto;
+    position:absolute;
+    top:2%;
+    left:45%;
+}
+.higiene h4 {
+    font-size: 0.5em;
+    position: absolute;
+    top:70%;
+    left:33%;
+}
+.item4 img {
+    width:8%;
+    height: auto;
+    position:absolute;
+    top:2%;
+    left:45%;
+}
+.descartaveis h4 {
+    font-size: 0.5em;
+    position: absolute;
+    top:70%;
+    left:33%;
+}
+
+
+
+
+
+
+
+
+}

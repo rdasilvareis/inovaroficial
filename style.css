@@ -1,0 +1,558 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.container{
+         
+         display: grid;
+         height: 100vh;           
+         background:orange;
+         color:white;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+         grid-template-areas: "header header header header"
+                               "main   main   main  aside"
+                               "main   main    main aside"                              
+                               "footer footer footer footer" ;
+         grid-gap: 0.5em;                 
+
+
+}
+
+.header {
+    background: green;
+    position: relative;
+    grid-area: header;
+    display: flex;
+    align-items: stretch;
+    
+    
+
+    
+    
+
+}
+.logo1{
+    padding:5px;
+}
+
+.logo1 img {
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid orange;
+       
+ 
+}
+
+.empresa a {
+    font-family:Arial, Helvetica, sans-serif;    
+    font-size:50px; 
+    position:absolute;
+    top:20px;
+    left: 400px;
+    color:orange;
+    
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+
+.menu {
+    position: absolute;
+    top:120px;
+    left:650px;
+}
+.menu ul li {
+    list-style-type: none;
+    padding: 15px;
+   
+}
+.menu ul {
+    z-index: 99;
+    
+    
+}
+
+.menu ul li {
+    display:inline;
+    position:relative;
+    font-size: 1.2rem;
+    
+}
+.menu ul li  ul li a{
+    text-decoration: none;
+    padding:10px;
+    color:white;
+    display: inline-block;    
+    transition:background .3s;
+    background-color: orange;
+    width: 200px;
+    align-items: center;
+    
+    
+}
+.menu ul li a:hover {
+    background-color: orange;
+}  
+ 
+.menu ul ul {
+    display: none;
+    left:0;
+    top:50px; 
+    position:absolute;
+}
+.menu ul li:hover ul {
+    display: block;
+}
+.menu ul ul{
+    width: 150px;
+}
+.menu ul ul li a{
+    display: block;
+}
+.menu {
+    display: flex;
+}
+
+
+
+.main {
+    background: green;
+    grid-area:main;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: left;
+    padding: 50px;
+    position: relative;
+
+}
+.main a {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left:100px;
+    
+    
+
+}
+.main p {
+     font-size:20px ;
+     position:absolute;
+     top:70px;
+     left:80px;
+}
+.logo2 img {
+    position: absolute;
+    top:20px;
+    left:690px;
+    height: 250px;
+    width:250px;
+}
+.aside {
+    background: green;
+    grid-area: aside;
+    position: relative;
+    
+}
+.titulo {
+     position: absolute;
+     top:10px;
+     left:75px;
+    
+}
+.titulo a:hover  {
+    display: block;
+    background-color: orange;
+    width:165px;    
+    
+    
+    
+}
+.titulo a {
+    text-decoration: none;
+    font-size: 30px;
+    color:white;
+    
+}
+.lista ul {
+    position:absolute;
+    top:70px;
+    left:50px;
+
+}
+.lista li{
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+}
+.footer {
+    background: green;
+    grid-area: footer;
+    position: relative;
+}
+.logo3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+}
+.logo3 img {
+    height: 80px;
+    width:80px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    
+}
+
+
+.empresa2 p {
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif ;
+    position: absolute;
+    top:10px;
+    left:850px;
+    
+    
+}
+.empresa2 ul a {
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif ;
+    position: absolute;
+    top:35px;
+    left: 1040px;
+    
+
+}
+.empresa2 h1 {
+    font-family:Arial, Helvetica, sans-serif ;
+    position: absolute;
+    top:110px;
+    left:300px;
+    
+    
+}
+@media screen and (max-width:900px )
+{
+    body{
+        
+        max-width: 900px;
+        
+        
+    }
+    
+    .container {
+       width: 100%;        
+       font-size: 0.3em;
+       grid-template-columns: 4fr 0fr 0fr 0fr;
+       grid-template-rows:  1fr 1fr 1fr 1fr;
+       grid-template-areas: "header"
+                             "main"
+                             "aside"
+                             "footer";
+    }
+    .header {
+       width:100%;
+       height: auto;        
+       position: relative;
+     
+    }
+    .header .menu  {
+       
+        padding: auto;   
+        top:auto;
+        left:40%;
+        font-family: Arial, Helvetica, sans-serif;
+        position:absolute;
+        
+    
+    }
+    
+    .header .menu ul li {
+        display:block;        
+        position:static;               
+        left:0;
+        font-size: 1.0em;
+        color:orange;
+        
+    }
+    .header .menu ul li ul li a {
+        font-size: 1.0em;
+    }
+    .empresa a {
+        width: auto;
+        height: auto; 
+        position: static;  
+        top:auto;
+        left: auto;
+        font-size:1.5em;            
+     
+        
+    }
+    .logo1 img {
+        position:absolute;
+        top:5%;
+        left:3%;
+        width: 15%;
+        height:auto;
+    
+    }
+    .main {
+        position: relative;
+        width: 100%;        
+        height: auto;
+
+    }
+    .main a {
+        position: absolute;
+        top:5%;
+        left:5%;
+        font-size: 0.7em;
+    }
+    .main p {
+        position:absolute;
+        top:10%;
+        left:7%;
+        width: 25%;
+        height: auto;
+        font-size: 0.5em;
+    }
+    .logo2 img { 
+               
+        position:absolute;
+        top:5%;
+        left:60%;
+        width: 15%;
+        height:auto;        
+        
+    }        
+    
+    .aside  {
+        width: 100%;
+        height: auto;
+    
+    }
+    .aside a {
+        
+        
+        font-size: 1.5em;
+        
+    }
+    .aside a:hover {
+            display: block;
+            background-color: orange;
+            width: 40px;
+    }
+    .aside ul {
+        font-size: 1.0em;
+    }
+    .footer {
+
+        width: 100%; 
+        height: 100%;  
+        position:relative;     
+        
+    }
+    .logo3 img {
+        
+        position:static;
+        top:10%;
+        left:50%;
+        width: 10%;
+        height:10%;
+        
+        
+        
+    
+        
+        
+
+    }
+    .empresa2 ul a {
+        position: static;
+        font-size: 1.0em;
+        
+        
+    }
+    .empresa2 ul h1 {
+        position: static;
+        font-size: 1.5em;
+
+    }
+    .empresa2 p {
+        position: static;
+        font-size: 1.0em;
+    }
+}
+
+@media screen and ( max-width:700px ){
+    body{
+        max-width: 700px;
+        
+        
+    }
+    
+    .container {
+       width: 100%;       
+       font-size: 0.3em;
+       grid-template-columns: 4fr 0fr 0fr 0fr;
+       grid-template-rows:  1fr 1fr 1fr 1fr;
+       grid-template-areas: "header"
+                             "main"
+                             "aside"
+                             "footer";
+    }
+    .header {
+       width:100%;
+       height: auto;        
+       position: relative;
+     
+    }
+    .header .menu  {
+       
+        padding: auto;   
+        top:auto;
+        left:40%;
+        font-family: Arial, Helvetica, sans-serif;
+        position:absolute;
+        
+    
+    }
+    
+    .header .menu ul li {
+        display:block;        
+        position:static;               
+        left:0;
+        font-size: 1.0em;
+        color:orange;
+        
+    }
+    .header .menu ul li ul li a {
+        font-size: 1.0em;
+    }
+    .empresa a {
+        width: auto;
+        height: auto; 
+        position: static;  
+        top:auto;
+        left: auto;
+        font-size:1.5em;            
+     
+        
+    }
+    .logo1 img {
+        position:absolute;
+        top:6%;
+        left:3%;
+        width: 15%;
+        height:auto;
+    
+    }
+    .main {
+        position: relative;
+        width: 100%;        
+        height: auto;
+
+    }
+    .main a {
+        position: absolute;
+        top:5%;
+        left:5%;
+        font-size: 0.7em;
+    }
+    .main p {
+        position:absolute;
+        top:10%;
+        left:7%;
+        width: 25%;
+        height: auto;
+        font-size: 0.5em;
+    }
+    .logo2 img { 
+               
+        position:absolute;
+        top:5%;
+        left:60%;
+        width: 15%;
+        height:auto;        
+        
+    }        
+    
+    .aside  {
+        width: 100%;
+        height: auto;
+        position: relative;
+    
+    }
+    .aside a {
+        
+        
+        font-size: 1.5em;
+        
+    }
+    .aside a:hover {
+            display: block;
+            background-color: orange;
+            width: 40px;
+    }
+    .aside ul {
+        
+
+        font-size: 1.0em;
+    }
+    .footer {
+
+        width: 100%; 
+        height: 100%;  
+        position:relative;     
+        
+    }
+    .logo3 img {
+        
+        position:static;
+        top:10%;
+        left:50%;
+        width: 10%;
+        height:10%;
+        
+        
+        
+    
+        
+        
+
+    }
+    .empresa2 ul a {
+        position: static;
+        font-size: 1.0em;
+        
+        
+    }
+    .empresa2 ul h1 {
+        position: static;
+        font-size: 1.5em;
+
+    }
+    .empresa2 p {
+        position: static;
+        font-size: 1.0em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

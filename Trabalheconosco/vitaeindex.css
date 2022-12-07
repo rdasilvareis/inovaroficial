@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.vitaener{
+    background: green;
+    height: 100vh;    
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "vitae1 vitae1"    
+                         "cadastro cadastro";
+    color:white;                     
+}
+.vitae1 {
+    background: green;
+    grid-area: vitae1;
+    position: relative;
+}
+.vitaelogo img{
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    top:35px;
+    left:600px;
+}
+.Currículo1 {
+    position: absolute;
+    top:230px;
+    left:250px;
+    font-size: 30px;
+
+
+
+}
+.cadastro a{
+    color:white;
+    font-size: 20px;
+}
+.cadastro {
+    position:relative;
+    color:orange;
+    grid-area: cadastro;
+
+}
+
+.form {
+    position:absolute;
+    top:320px;
+    left:480px;
+    height: 400px;
+    width: 400px;
+}
+.form input {
+    width: 100%;
+    padding: 5px 0;
+    margin:4px 0px;
+}
+.form input[type=text] {
+    height: 100px;
+}
+.form button {
+    background-color: orange;
+    border:none;
+    width:100px;
+}
+@media screen and ( max-width:700px)
+{
+    body{
+        max-width: 700px;
+            
+            
+    }
+    
+    .vitaener {
+       width: 100%;                  
+       grid-template-columns: 4fr 0fr 0fr 0fr;
+       grid-template-rows:  2fr 2fr;
+       grid-template-areas:  "vitae1"
+                             "cadastro";
+                          
+    }
+    .vitae1 {
+        position: relative;
+        width: 100%;
+        
+    }
+    
+    .vitaelogo img {
+        width:10%;
+        height: auto;
+        position: absolute;
+        top:10%;
+        left:45%;
+        
+    }
+    .Currículo1 {
+        font-size: 0.5em;
+        position: absolute;
+        top: 40%;
+        left:35%;
+    }
+    
+    .cadastro {
+        width: 100%; 
+        position: relative;
+               
+        
+    }
+   .form {
+    position: fixed;
+    font-size: 0.5em;
+    top:25%;
+    left:40%;
+    width: 20%;
+    height: 20%;
+   }
+   
+
+.form button {
+    background-color: orange;
+    border:none;
+    width:10%; 
+    font-size: 0.5em;  
+ 
+ 
+}
+   
+
+}

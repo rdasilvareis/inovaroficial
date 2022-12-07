@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+.recruta {
+    background: green;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "recruta1 recruta1"    
+                         "recruta3 recruta3" ;
+    color:white;                     
+}
+.recruta1 {
+    background: green;
+    grid-area: recruta1;
+    position: relative;
+}
+.recrutalogo img{
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    top:50px;
+    left:600px;
+}
+.recrutasetor1 li{
+    list-style-type: none;
+}
+.recrutasetor1 {
+    position:absolute;
+    top:200px;
+    left:560px;
+    font-size: 40px;
+    
+}
+.recrutasetor2 li{
+    list-style-type: none;
+}
+.recrutasetor2 {
+    position:absolute;
+    top:250px;
+    left:250px;
+    font-size: 40px;
+    
+}
+.recruta3 {
+    background: green;
+    grid-area: recruta3;
+    position:relative;
+}
+.recruta3 ul li h1{
+    position:absolute;
+    top:50px;
+    left:530px;
+}
+.recruta3 ul li h2{
+    position:absolute;
+    top:90px;
+    left:585px;
+}
+.recruta3 ul li h3{
+    position:absolute;
+    top:115px;
+    left:570px;
+}
+@media screen and ( max-width:700px)
+{
+    body{
+        max-width: 700px;
+            
+            
+    }
+    
+    .recruta {
+       width: 100%;                  
+       grid-template-columns: 4fr 0fr 0fr 0fr;
+       grid-template-rows:  2fr 2fr;
+       grid-template-areas:  "recruta1"
+                             "recruta3";
+                          
+    }
+    .recruta1 {
+        position: relative;
+        width: 100%;
+        
+    }
+    
+    .recrutalogo img {
+        width:10%;
+        height: auto;
+        position: absolute;
+        top:10%;
+        left:45%;
+        
+    }
+    .recrutasetor1 {
+        font-size: 0.8em;
+        position: absolute;
+        top: 40%;
+        left:45%;
+    }
+    .recrutasetor2 {
+        font-size: 0.5em;
+        position: absolute;
+        top: 60%;
+        left:37%;
+    }
+    .recruta3 {
+        width: 100%; 
+        position: relative;
+               
+        
+    }    
+    .recruta3 ul li h1 {
+        font-size: 1.0em;
+        position: absolute;
+        top:10%;
+        left:40%; 
+    }
+    .recruta3 ul li h2 {
+        font-size: 0.7em;
+        position: absolute;
+        top:15%;
+        left:44%; 
+    }
+    .recruta3 ul li h3 {
+        font-size: 0.5em;
+        position: absolute;
+        top:20%;
+        left:44%; 
+    }
+
+}
